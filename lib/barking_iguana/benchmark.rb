@@ -3,7 +3,7 @@ require "barking_iguana/benchmark/version"
 module BarkingIguana
   module Benchmark
     def self.included into
-      into.include InstanceMethods
+      into.send :include, InstanceMethods
     end
 
     module InstanceMethods
